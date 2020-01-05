@@ -1,9 +1,7 @@
 # Project Hero Squad
 ### Description
-This project is an automation of the caesar Cipher. It takes in a text from the 
-user and using a key that the user also inputs, converts the text into a cipher 
-text by moving each character in the input string (excluding special characters 
-and space) by the number of spaces indicated in the key
+This project allows you to recruit a well-balanced team of superheroes. Users are 
+able to create squads of heroes fighting different specific causes.
 
 ### BDD
 |feature     |Description      |
@@ -18,7 +16,7 @@ and space) by the number of spaces indicated in the key
 
 
 ### Technologies used 
-* Java
+* Java (Spark)
 * Git for version control
 
 ### setup

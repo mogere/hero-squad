@@ -26,5 +26,9 @@ public class HeroTest {
         Hero hero = new Hero("VegMan");
         assertEquals(true, hero instanceof Hero);
     }
-
+    @Test
+    public void getNameReturnsName_true(){
+        Hero hero = new Hero("vegman");
+        assertEquals("vegman", hero.getName());
+    }
 }

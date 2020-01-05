@@ -3,11 +3,32 @@
 {{#partial "content"}}
     <div class = "row">
         <h2>Hero Squad</h2>
-        <p>You can create your own Hero squad here</p>
+        <p>You can create your own <strong>Hero squad</strong> here</p>
         <div class = "col-md-6">
-            <h3>Add a name to your Hero squad</h3>
-            <form action = "" method = "post">
-                <input type = "text" placeholder="Enter the Hero squad name">
+            <form action = "/squadName" method = "post">
+                <div class = "card">
+                    <div class = "card-title"> <h3>Add a name to your Hero squad</h3></div>
+                    <label>Squad Name</label>
+                <input type = "text" placeholder="Enter the Hero squad name" name = "squad" class = "form-control">
+                    <div class = "card footer">
+                        <p></p>
+                    <button type = "submit" class = "btn btn-success">Enter</button>
+                    </div>
+                </div>
+                <div class = "card">
+                    <div class = "card-title"> <h3>Add heroes to your squad</h3></div>
+                    <label>Select Squad Name</label>
+                    <select class="form-control input-sm mb15" name="bookAuthor">
+                        <option value="">-</option>
+                        {{#each allSquads}}
+                            <option value="{{id}}">{{squadName}}</option>
+                        {{/each}}
+                    </select>
+                    <div class = "card footer">
+                        <p></p>
+                        <button type = "submit" class = "btn btn-success">Enter</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

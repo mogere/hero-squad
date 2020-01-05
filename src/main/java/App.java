@@ -6,6 +6,8 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import java.util.HashMap;
 import java.util.Map;
+import models.Hero;
+import models.Squad;
 
 import static spark.Spark.*;
 

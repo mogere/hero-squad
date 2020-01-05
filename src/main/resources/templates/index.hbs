@@ -5,19 +5,20 @@
         <h2>Hero Squad</h2>
         <p>You can create your own <strong>Hero squad</strong> here</p>
         <div class = "col-md-6">
-            <form action = "/squadName" method = "post">
+            <form action = "/postSquadDetails" method = "post">
                 <div class = "card">
-                    <div class = "card-title"> <h3>Add a name to your Hero squad</h3></div>
+                    <div class = "card-title"> <h3>Create your Hero squad</h3></div>
                     <label>Squad Name</label>
-                <input type = "text" placeholder="Enter the Hero squad name" name = "squad" class = "form-control">
+                    <input type = "text" placeholder="Enter the Hero squad name" name = "squad" class = "form-control">
+                    <label>Cause</label>
+                    <input type = "text" placeholder="What cause do they fight for" name = "cause" class = "form-control">
                     <div class = "card footer">
                         <p></p>
                     <button type = "submit" class = "btn btn-success">Enter</button>
                     </div>
                 </div>
                 <div class = "card">
-                    <div class = "card-title"> <h3>Add heroes to your squad</h3></div>
-                    <label>Select Squad Name</label>
+                    <div class = "card-title"> <h3>Select heroes to add to your squad</h3></div>
                     <select class="form-control input-sm mb15" name="bookAuthor">
                         <option value="">-</option>
                         {{#each allSquads}}

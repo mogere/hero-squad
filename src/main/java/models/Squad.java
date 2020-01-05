@@ -9,10 +9,16 @@ public class Squad {
     private static ArrayList<Squad> allSquads = new ArrayList<>();
 
 
-    public Squad(){
-
+    public Squad(String name){
+        this.squadName = name;
     }
 
+    public String getCause(){
+        return cause;
+    }
+    public void setCause(String cause){
+        this.cause = cause;
+    }
 
     public static ArrayList<Squad> getAllSquads() {
         return allSquads;

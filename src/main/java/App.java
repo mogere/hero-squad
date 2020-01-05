@@ -20,5 +20,17 @@ public class App {
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
+        //add squad details
+        post("/postSquadDetails", (request, response) ->{
+            Map<String, Object> model = new HashMap<>();
+            String squadName = request.queryParams("squadName");
+            String cause = request.queryParams("cause");
+            Squad newSquad = new Squad(squadName);
+            newSquad.setCause(cause);
+            model.put("squadName", squadName);
+            model.put("cause", cause);
+            return new ModelAndView(model, "hero.hbs");
+        }, new HandlebarsTemplateEngine());
+
     }
 }

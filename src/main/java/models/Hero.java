@@ -10,9 +10,14 @@ public class Hero {
     private String weakness;
     private static ArrayList<Hero> allHeroes = new ArrayList<>();
 
-    public Hero(){
-
+    public Hero(String name, String power, int age, String weakness){
+        this.name = name;
+        this.power = power;
+        this.age = age;
+        this.weakness = weakness;
+        allHeroes.add(this);
     }
+
     public Hero(String name){
         this.name = name;
     }

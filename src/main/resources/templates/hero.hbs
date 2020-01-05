@@ -4,13 +4,15 @@
 
     <form action = "/addHeroes" method = "post">
     <div class = "card">
-        <div class = "card-title"> <h3>Select heroes to add to your squad</h3></div>
-        <select class="form-control input-sm mb15" name="bookAuthor">
-            <option value="">-</option>
-            {{#each allSquads}}
-                <option value="{{id}}">{{squadName}}</option>
-            {{/each}}
-        </select>
+        <div class = "card-title"> <h3>Add new heroes</h3></div>
+       <label>Name</label>
+        <input type = "text" placeholder="Enter the Hero's name" name = "hero" class = "form-control">
+        <label>Hero's power</label>
+        <input type = "text" placeholder="Enter the Hero's Power" name = "power" class = "form-control">
+        <label>Hero's Weakness</label>
+        <input type = "text" placeholder="Enter the Hero's Weakness" name = "weakness" class = "form-control">
+        <label>Hero's Age</label>
+        <input type = "text" placeholder="Enter the Hero's Age" name = "age" class = "form-control">
         <div class = "card footer">
             <p></p>
             <button type = "submit" class = "btn btn-success">Enter</button>

@@ -20,7 +20,9 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             ArrayList<Hero> allHeroes = Hero.getAllHeroes();
             ArrayList<Squad> allSquads = Squad.getAllSquads();
-            return new ModelAndView(model, "index.hbs");
+            model.put("allHeroes", allHeroes);
+            model.put("allSquads", allSquads);
+        return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
         //add squad details
@@ -38,7 +40,6 @@ public class App {
         //show add heroes page
         get("/addHeroes", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-
             return new ModelAndView(model, "hero.hbs");
         }, new HandlebarsTemplateEngine());
 

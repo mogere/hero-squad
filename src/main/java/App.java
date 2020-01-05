@@ -29,7 +29,7 @@ public class App {
             newSquad.setCause(cause);
             model.put("squadName", squadName);
             model.put("cause", cause);
-            return new ModelAndView(model, "hero.hbs");
+            return new ModelAndView(model, "successSquad.hbs");
         }, new HandlebarsTemplateEngine());
 
     }

@@ -22,7 +22,7 @@ public class Hero {
         return name;
     }
 
-    public static ArrayList<Hero> getAllSquads() {
+    public static ArrayList<Hero> getAllHeroes() {
         return allHeroes;
     }
 

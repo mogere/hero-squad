@@ -3,6 +3,16 @@
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
         <strong>Has Been Successfully Added to the squad!</strong>. <a href="/addHeroes" class="alert-link">Add another hero</a>.
     </div>
+    {{#if allHeroes}}
+    <div class = "card">
+        <h3>Here are your added heroes</h3>
+        {{#each allHeroes}}
+            <ol>
+                <li>{{heroName}}</li>
+            </ol>
+        {{/each}}
+    </div>
+    {{/if}}
 {{/partial}}
 
 {{> layout.hbs}}

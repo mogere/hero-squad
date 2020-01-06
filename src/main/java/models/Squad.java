@@ -31,4 +31,8 @@ public class Squad {
     public static ArrayList<Squad> getAllSquads() {
         return allSquads;
     }
+
+    public List<Hero> getAllHeroes(){
+        return heroes;
+    }
 }

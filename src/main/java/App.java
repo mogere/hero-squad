@@ -38,7 +38,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         //show add heroes page
-        post("/addHeroes", (request, response) -> {
+        post("/addHero", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String heroName = request.queryParams("hero");
             String power = request.queryParams("power");
@@ -52,5 +52,9 @@ public class App {
             return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/addHeroes", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "hero.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }

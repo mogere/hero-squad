@@ -28,7 +28,7 @@ public class App {
         //add squad details
         post("/postSquadDetails", (request, response) ->{
             Map<String, Object> model = new HashMap<>();
-            String squadName = request.queryParams("squadName");
+            String squadName = request.queryParams("squad");
             String cause = request.queryParams("cause");
             Squad newSquad = new Squad(squadName);
             newSquad.setCause(cause);
@@ -38,9 +38,18 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         //show add heroes page
-        get("/addHeroes", (request, response) -> {
-            Map<String, Object> model = new HashMap<String, Object>();
-            return new ModelAndView(model, "hero.hbs");
+        post("/addHeroes", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
+            String heroName = request.queryParams("hero");
+            String power = request.queryParams("power");
+            String weakness = request.queryParams("weakness");
+            int age = Integer.parseInt(request.queryParams("age"));
+            Hero newHero = new Hero(heroName, power, age,weakness);
+            model.put("heroName", heroName);
+            model.put("power", power);
+            model.put("weakness", weakness);
+            model.put("age", age);
+            return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 
     }

@@ -18,7 +18,7 @@ public class HeroTest {
 
     @Test
     public void NewHeroObjectInstanciatesCorrectly_true(){
-        Hero hero = new Hero();
+        Hero hero = new Hero("superhero", "swooshing", 30, "resilience");
         assertEquals(true, hero instanceof Hero);
     }
     @Test

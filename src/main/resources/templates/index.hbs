@@ -18,6 +18,17 @@
                     </div>
                 </div>
             </form>
+
+            {{#if allSquads}}
+            <h4>Here are the available squads</h4>
+            {{#each allSquads}}
+                <ol>
+                    {{#each allSquads}}
+                        <li>{{squadName}}</li>
+                    {{/each}}
+                </ol>
+            {{/each}}
+            {{/if}}
                 </div>
 
         <div class = "col-md-6">

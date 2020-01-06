@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Squad {
-    private String squadName;
+    String squadName;
     private String cause;
-    private int id;
+    int id;
     private static ArrayList<Squad> allSquads = new ArrayList<>();
-    private List<Hero> heroes;
+    List<Hero> heroes;
 
 
-    public Squad(String name){
-        this.squadName = name;
+    public Squad(String squadName){
+        this.squadName = squadName;
         allSquads.add(this);
         this.id = allSquads.size();
     }
@@ -20,6 +20,7 @@ public class Squad {
     public String getCause(){
         return cause;
     }
+
     public void setCause(String cause){
         this.cause = cause;
     }

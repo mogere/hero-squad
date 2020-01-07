@@ -28,4 +28,17 @@ public class SquadTest {
         squad.setCause("climate");
         assertEquals("climate", squad.getCause());
     }
+
+    @Test
+    public void nameSetterWorks_name(){
+        Squad squad = new Squad("Super");
+        squad.setSquadName("SuperSquad");
+        assertEquals("SuperSquad", squad.getSquadName());
+    }
+
+    @Test
+    public void getIdWorks_ID(){
+        Squad squad = new Squad("Super");
+        assertEquals(1,squad.getId());
+    }
 }

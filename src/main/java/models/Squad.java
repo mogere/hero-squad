@@ -7,6 +7,7 @@ public class Squad {
     private String squadName;
     private String cause;
     private int id;
+    private int max_number;
     private static ArrayList<Squad> allSquads = new ArrayList<>();
     List<Hero> heroes;
 
@@ -14,6 +15,7 @@ public class Squad {
     public Squad(String squadName){
         this.squadName = squadName;
         allSquads.add(this);
+        heroes=new ArrayList<Hero>();
         this.id = allSquads.size();
     }
 
@@ -32,6 +34,7 @@ public class Squad {
     }
 
     public void addHeroToSquad(Hero hero){
+        if(id<max_number)
         heroes.add(hero);
     }
 
@@ -57,5 +60,9 @@ public class Squad {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setMax_number(int max_number) {
+        this.max_number = max_number;
     }
 }

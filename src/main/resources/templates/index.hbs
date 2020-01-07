@@ -12,6 +12,9 @@
                     <input type = "text" placeholder="Enter the Hero squad name" name = "squad" class = "form-control">
                     <label>Cause</label>
                     <input type = "text" placeholder="What cause do they fight for" name = "cause" class = "form-control">
+
+                    <label>Number of heroes</label>
+                    <input type = "text" placeholder="No. of Heroes" name = "number" class = "form-control">
                     <div class = "card footer">
                         <p></p>
                     <button type = "submit" class = "btn btn-success">Enter</button>
@@ -29,7 +32,7 @@
             {{#each allSquads}}
                 <ol>
                     {{#each allSquads}}
-                        <li>{{squadName}} fighting {{cause}}</li>
+                        <li><b>{{squadName}} </b>  A team of {{max_number}} fighting <strong class ="success">  {{cause}} </strong></li>
                         <ul>{{#each heroes}}
                             <li>{{heroName}}</li>
                             {{/each}}

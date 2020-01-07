@@ -38,27 +38,37 @@ public class App {
             Map<String, Object> model = new HashMap<>();
             String squadName = request.queryParams("squad");
             String cause = request.queryParams("cause");
+            int max_number = Integer.parseInt(request.queryParams("number"));
             Squad newSquad = new Squad(squadName);
             newSquad.setCause(cause);
+            newSquad.setMax_number(max_number);
             model.put("squadName", squadName);
             model.put("cause", cause);
+            model.put("max_number", max_number);
             return new ModelAndView(model, "successSquad.hbs");
         }, new HandlebarsTemplateEngine());
 
         //show add heroes page
         post("/addHero", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
+            String squadId = request.queryParams("squads");
             String heroName = request.queryParams("hero");
             String power = request.queryParams("power");
             String weakness = request.queryParams("weakness");
             int age = Integer.parseInt(request.queryParams("age"));
-            int squadId = Integer.parseInt(request.queryParams("age"));
             Hero newHero = new Hero(heroName, power, age,weakness);
             ArrayList<Hero> allHeroes = Hero.getAllHeroes();
-            Squad newSquad = Squad.findSquad(squadId);
+            ArrayList<Squad> allSquads = Squad.getAllSquads();
+//            Squad newSquad = Squad.findSquad(Integer.parseInt(squadId));
+//            newSquad.addHeroToSquad(newHero);
             model.put("heroName", heroName);
+            model.put("power", power);
+            model.put("weakness", weakness);
+            model.put("age", age);
             model.put("allHeroes", allHeroes);
-            newSquad.addHeroToSquad(newHero);
+            model.put("allSquads", allSquads);
+            model.put("squadId", squadId);
+//            model.put("newSquad", newSquad);
             return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 

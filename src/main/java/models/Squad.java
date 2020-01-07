@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Squad {
-    String squadName;
+    private String squadName;
     private String cause;
-    int id;
+    private int id;
     private static ArrayList<Squad> allSquads = new ArrayList<>();
     List<Hero> heroes;
 
@@ -27,6 +27,9 @@ public class Squad {
     public void setCause(String cause){
         this.cause = cause;
     }
+    public void setName(String name){
+        this.squadName = name;
+    }
 
     public void addHeroToSquad(Hero hero){
         heroes.add(hero);
@@ -38,5 +41,21 @@ public class Squad {
 
     public List<Hero> getAllHeroes(){
         return heroes;
+    }
+
+    public String getSquadName() {
+        return squadName;
+    }
+
+    public void setSquadName(String squadName) {
+        this.squadName = squadName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

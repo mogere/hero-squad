@@ -6,9 +6,9 @@ able to create squads of heroes fighting different specific causes.
 ### BDD
 |feature     |Description      |
 |------------|------------------
-|User interface | Asks for the string text and a key from user|
-|Encryption|Converts the string into a cipher text using the key and displays it|
-|Decipher|converts the cipher text back to the original text and displays it|
+|Create Squad | Create Squad with name and cause|
+|Create Heroes|Create Hero with their specific information|
+|Add heroes to squad|Add heroes to a specific squad|
 
 
 ### Contributors
@@ -18,6 +18,7 @@ able to create squads of heroes fighting different specific causes.
 ### Technologies used 
 * Java (Spark)
 * Git for version control
+* Heroku for hosting
 
 ### setup
 Download Java Development kit 11. Previous or later versions may

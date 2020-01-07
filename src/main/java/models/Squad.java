@@ -21,6 +21,9 @@ public class Squad {
         return cause;
     }
 
+    public static Squad findSquad(int id){
+        return allSquads.get(id-1);
+    }
     public void setCause(String cause){
         this.cause = cause;
     }

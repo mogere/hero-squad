@@ -34,13 +34,16 @@
         <div class = "col-md-6">
             <h3>Add heroes to your squad</h3>
             <div class = "card">
+                <form action = "/addToSquad" method = "post">
                 <label>choose your heroes</label>
                 <select class="form-control input-sm mb15" name="heroes">
                     <option value="">-</option>
                     {{#each allHeroes}}
                         <option value="{{id}}">{{heroName}}</option>
                     {{/each}}
-                </select>
+                </select><br>
+                <button  type = "submit" class = "btn btn-success">Add to Squad</button>
+                </form>
             </div>
         </div>
     </div>

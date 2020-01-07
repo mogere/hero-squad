@@ -52,13 +52,13 @@ public class App {
             String power = request.queryParams("power");
             String weakness = request.queryParams("weakness");
             int age = Integer.parseInt(request.queryParams("age"));
+            int squadId = Integer.parseInt(request.queryParams("age"));
             Hero newHero = new Hero(heroName, power, age,weakness);
             ArrayList<Hero> allHeroes = Hero.getAllHeroes();
+            Squad newSquad = Squad.findSquad(squadId);
             model.put("heroName", heroName);
-            model.put("power", power);
-            model.put("weakness", weakness);
-            model.put("age", age);
             model.put("allHeroes", allHeroes);
+            newSquad.addHeroToSquad(newHero);
             return new ModelAndView(model, "successHero.hbs");
         }, new HandlebarsTemplateEngine());
 

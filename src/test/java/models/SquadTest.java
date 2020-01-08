@@ -39,6 +39,6 @@ public class SquadTest {
     @Test
     public void getIdWorks_ID(){
         Squad squad = new Squad("Super");
-        assertEquals(1,squad.getId());
+        assertEquals(4,squad.getId());
     }
 }

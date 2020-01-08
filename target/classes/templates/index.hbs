@@ -1,0 +1,48 @@
+{{#partial "title"}}Welcome{{/partial}}
+
+{{#partial "content"}}
+    <h2 class = "text-center">Hero Squad</h2>
+    <h4 class = "text-center">You can create your own <strong>Hero squad</strong> here</h4>
+    <div class = "row">
+        <div class = "col-md-6">
+            <form action = "/postSquadDetails" method = "post">
+                <div class = "card">
+                    <div class = "card-title"> <h3>Create your Hero squad</h3></div>
+                    <label>Squad Name</label>
+                    <input type = "text" placeholder="Enter the Hero squad name" name = "squad" class = "form-control">
+                    <label>Cause</label>
+                    <input type = "text" placeholder="What cause do they fight for" name = "cause" class = "form-control">
+
+                    <label>Number of heroes</label>
+                    <input type = "text" placeholder="No. of Heroes" name = "number" class = "form-control">
+                    <div class = "card footer">
+                        <p></p>
+                    <button type = "submit" class = "btn btn-success">Enter</button>
+                    </div>
+                </div>
+            </form>
+
+
+                </div>
+
+
+            <div class = "card">
+        {{#if allSquads}}
+            <h3>Here are the available squads</h3>
+            {{#each allSquads}}
+                <ol>
+                    {{#each allSquads}}
+                        <li><b>{{squadName}} </b>  A team of {{max_number}} fighting <strong class ="success">  {{cause}} </strong></li>
+                        <ul>{{#each heroes}}
+                            <li>{{heroName}}</li>
+                            {{/each}}
+                        </ul>
+                    {{/each}}
+                </ol>
+            {{/each}}
+        {{/if}}
+    </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}
